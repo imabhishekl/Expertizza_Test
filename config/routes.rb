@@ -33,12 +33,6 @@ Expertiza::Application.routes.draw do
     end
   end
 
-  resources :advice do
-    collection do
-      post :save_advice
-    end
-  end
-
   resources :assessment360 do
     collection do
       get :one_course_all_assignments
@@ -311,8 +305,7 @@ Expertiza::Application.routes.draw do
       get :delete_reviewer
       get :distribution
       get :list_mappings
-      get :response_report
-      post :response_report
+      get :review_report
       get :select_metareviewer
       get :select_reviewer
       get :select_mapping
